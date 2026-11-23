@@ -3,38 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Информатика мұғалімінің визитка-сайты</title>
+<title>Информатика мұғалімінің порталы</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>Сазаков Алы</h1>
-  <p>Информатика пәнінің мұғалімі</p>
-  <nav>
-    <a href="#about">Мен туралы</a>
-    <a href="#plan">Сабақ жоспары</a>
-    <a href="#contacts">Байланыс</a>
-  </nav>
+<header class="top">
+  <button class="burger" onclick="document.body.classList.toggle('open')">☰</button>
+  <div class="logo">Информатика<span>Портал</span></div>
+  <div class="user">
+    <span class="bell">🔔<i>3</i></span>
+    <div class="avatar">СА</div>
+    <div class="uname">Сазаков Алы<small>Информатика мұғалімі</small></div>
+  </div>
 </header>
+
+<aside class="side">
+  <a href="#" class="m active" data-p="home">🏠 Басты бет</a>
+  <a href="#" class="m" data-p="plan">📅 Сабақ жоспары</a>
+  <a href="#" class="m" data-p="mat">📚 Оқу материалдары</a>
+  <a href="#" class="m" data-p="grades">📊 Үлгерім</a>
+  <a href="#" class="m" data-p="contacts">✉️ Байланыс</a>
+</aside>
+
 <main>
-  <section id="about">
-    <h2>Мен туралы</h2>
-    <p>Мен Сазаков Алы - информатика мамандығының студентімін. Оқушыларға бағдарламалау, алгоритмдер және цифрлық сауаттылықты қызықты әрі түсінікті түрде үйретуді мақсат етемін.</p>
+  <section class="page" id="home">
+    <h2>Басты бет</h2>
+    <div class="cards">
+      <div class="card c1"><b>3</b>Сынып</div>
+      <div class="card c2"><b>12</b>Сабақ жоспары</div>
+      <div class="card c3"><b>8</b>Материал</div>
+      <div class="card c4"><b>95%</b>Үлгерім</div>
+    </div>
+    <div class="box">
+      <h3>Мен туралы</h3>
+      <p>Мен информатика мамандығының студентімін. Оқушыларға бағдарламалау, алгоритмдер және цифрлық сауаттылықты қызықты әрі түсінікті түрде үйретуді мақсат етемін.</p>
+    </div>
+    <div class="box">
+      <h3>Хабарландырулар</h3>
+      <ul>
+        <li>Жаңа сабақ жоспары қосылды: «HTML негіздері»</li>
+        <li>Бұлттық технологиялар бойынша материал жаңартылды</li>
+        <li>Практикалық жұмыс сілтемесі жарияланды</li>
+      </ul>
+    </div>
   </section>
-  <section id="plan">
+
+  <section class="page" id="plan" hidden>
     <h2>Сабақ жоспары</h2>
+    <div class="box wide">
     <table>
-      <tr><th>Тақырып</th><th>Сынып</th><th>Уақыты</th></tr>
-      <tr><td>Алгоритм ұғымы</td><td>7</td><td>45 мин</td></tr>
-      <tr><td>HTML негіздері</td><td>8</td><td>45 мин</td></tr>
-      <tr><td>Бұлттық технологиялар</td><td>9</td><td>45 мин</td></tr>
+      <tr><th>№</th><th>Тақырып</th><th>Сынып</th><th>Уақыты</th></tr>
+      <tr><td>1</td><td>Алгоритм ұғымы</td><td>7</td><td>45 мин</td></tr>
+      <tr><td>2</td><td>HTML негіздері</td><td>8</td><td>45 мин</td></tr>
+      <tr><td>3</td><td>CSS стильдері</td><td>8</td><td>45 мин</td></tr>
+      <tr><td>4</td><td>Бұлттық технологиялар</td><td>9</td><td>45 мин</td></tr>
     </table>
+    </div>
   </section>
-  <section id="contacts">
+
+  <section class="page" id="mat" hidden>
+    <h2>Оқу материалдары</h2>
+    <div class="box"><ul>
+      <li>📄 Алгоритмдер: презентация</li>
+      <li>📄 HTML және CSS: конспект</li>
+      <li>🎬 Azure бұлтына сайт орналастыру: бейне</li>
+    </ul></div>
+  </section>
+
+  <section class="page" id="grades" hidden>
+    <h2>Үлгерім</h2>
+    <div class="box wide">
+    <table>
+      <tr><th>Пән</th><th>Сынып</th><th>Орташа балл</th></tr>
+      <tr><td>Информатика</td><td>7</td><td>4.6</td></tr>
+      <tr><td>Информатика</td><td>8</td><td>4.4</td></tr>
+      <tr><td>Информатика</td><td>9</td><td>4.8</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <section class="page" id="contacts" hidden>
     <h2>Байланыс</h2>
-    <p>Email: <a href="mailto:example@mail.kz">180103as@gmail.com</a></p>
+    <div class="box">
+      <p>Email: <a href="mailto:example@mail.kz">example@mail.kz</a></p>
+      <p>Орналастырылған: Microsoft Azure Static Web Apps</p>
+    </div>
   </section>
 </main>
-<footer>© 2026 Azure Static Web Apps арқылы орналастырылған</footer>
+
+<script>
+document.querySelectorAll('.m').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    document.querySelectorAll('.m').forEach(function(x){x.classList.remove('active')});
+    a.classList.add('active');
+    document.querySelectorAll('.page').forEach(function(p){p.hidden=true});
+    document.getElementById(a.dataset.p).hidden=false;
+    document.body.classList.remove('open');
+  });
+});
+</script>
 </body>
 </html>
